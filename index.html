@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shafaul Sharup, MPH, BSN | Professional Portfolio</title>
+
+    <style>
+
+        :root {
+
+            --primary: #003366; 
+
+            --secondary: #008080; 
+
+            --accent: #f0f8ff;
+
+            --gold: #d4af37; 
+
+            --text: #333333;
+
+            --bg: #f9f9f9;
+
+            --white: #ffffff;
+
+        }
+
+        body {
+
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+            line-height: 1.6;
+
+            color: var(--text);
+
+            margin: 0;
+
+            background-color: var(--bg);
+
+        }
+
+        
+
+        /* Navigation */
+
+        nav {
+
+            background: var(--white);
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+            padding: 1rem 5%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+        }
+
+        .logo {
+
+            font-size: 1.3rem;
+
+            font-weight: 800;
+
+            color: var(--primary);
+
+            text-decoration: none;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+        }
+
+        .nav-links a {
+
+            text-decoration: none;
+
+            color: var(--text);
+
+            margin-left: 20px;
+
+            font-weight: 600;
+
+            font-size: 0.9rem;
+
+            transition: color 0.3s;
+
+        }
+
+        .nav-links a:hover { color: var(--secondary); }
+
+
+        /* Hero Section */
+
+        header {
+
+            background: linear-gradient(135deg, var(--primary), #004d40);
+
+            color: var(--white);
+
+            padding: 5rem 5%;
+
+            text-align: center;
+
+        }
+
+        header h1 { font-size: 2.8rem; margin: 0 0 10px 0; font-weight: 800; }
+
+        header h2 { font-size: 1.3rem; font-weight: 400; opacity: 0.95; margin-bottom: 25px; max-width: 800px; margin: 0 auto 25px auto; }
+
+        .badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 35px; }
+
+        .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+
+        .btn { display: inline-block; background: var(--white); color: var(--primary); padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+
+        .btn:hover { transform: translateY(-3px); }
+
+
+        /* Layout */
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 20px; }
+
+        h3.section-title { color: var(--primary); font-size: 2rem; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; margin-bottom: 2.5rem; display: inline-block; }
+
+
+        /* Award Box */
+
+        .award-box { border: 2px solid var(--gold); background: #fffdf5; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15); }
+
+        .award-box h4 { color: #b8860b; font-size: 1.4rem; margin: 0 0 10px 0; }
+
+
+        /* Grid */
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+
+
+        /* Cards */
+
+        .card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.06); border-top: 5px solid var(--secondary); transition: transform 0.2s; }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card h4 { color: var(--primary); margin: 0 0 5px 0; font-size: 1.1rem; }
+
+        .card .role { font-weight: 700; color: #555; display: block; margin-bottom: 5px; font-size: 0.95rem; }
+
+        .card .meta { font-size: 0.85rem; color: #777; font-style: italic; margin-bottom: 15px; display: block; }
+
+        .card ul { padding-left: 20px; margin-bottom: 0; }
+
+        .card li { margin-bottom: 8px; font-size: 0.95rem; color: #444; }
+
+
+        /* Tags */
+
+        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+
+        .tag { background: var(--accent); color: var(--primary); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+
+
+        /* Footer */
+
+        footer { background: var(--primary); color: var(--white); text-align: center; padding: 3rem; margin-top: 4rem; }
+
+        footer a { color: var(--accent); text-decoration: none; }
+
+        
+
+        @media (max-width: 768px) {
+
+            header h1 { font-size: 2.2rem; }
+
+            .nav-links { display: none; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav>
+
+        <a href="#" class="logo">Shafaul Sharup, MPH, BSN</a>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#clinical">Clinical</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#certifications">Certifications</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <header>
+
+        <h1>Shafaul Sharup</h1>
+
+        <h2>Bridging Clinical Excellence & Public Health Innovation</h2>
+
+        <div class="badges">
+
+            <span class="badge">Registered Nurse Candidate (Feb 2026)</span>
+
+            <span class="badge">MPH Community Health</span>
+
+            <span class="badge">Parker Jewish Institute Scholar</span>
+
+        </div>
+
+        <p>A dual-degree healthcare professional specializing in cardiac care, patient advocacy, and health policy.</p>
+
+        <br>
+
+        <a href="https://www.linkedin.com/in/shafaul-sharup" class="btn" target="_blank">Connect on LinkedIn</a>
+
+    </header>
+
+
+    <div class="container" id="about">
+
+        <div class="award-box">
+
+            <h4>🏆 Recipient of the Parker Jewish Institute Scholarship</h4>
+
+            <p>Selected for a <strong>$10,000 merit grant</strong> from the Parker Jewish Institute for Health Care and Rehabilitation. Recognized for "professional promise in the nursing field," academic excellence, and leadership potential in the future healthcare workforce.</p>
+
+        </div>
+
+
+        <h3 class="section-title">Professional Profile</h3>
+
+        <p>I am a dedicated nursing professional based in Brooklyn, NY, with a unique foundation in public health. Holding both an <strong>Accelerated BSN from SUNY Downstate</strong> and an <strong>MPH from CUNY</strong>, I view patient care through a dual lens: treating the immediate acute condition while understanding the broader social determinants of health.</p>
+
+    </div>
+
+
+    <div class="container" id="clinical">
+
+        <h3 class="section-title">Clinical Rotations</h3>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h4>Medical-Surgical III (Cardiac PCU)</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">SUNY Downstate UHB | Sep - Nov 2025 | 75 Hours</span>
+
+                <ul>
+
+                    <li>Managed care for complex heart failure and pre-transplant patients with diabetic/renal comorbidities.</li>
+
+                    <li>Interpreted telemetry rhythms to monitor fluid balance and prevent decompensation.</li>
+
+                    <li>Performed sterile wound care and 12-lead EKGs under strict infection control protocols.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Community Health</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">Fort Greene Council | Sep - Nov 2025 | 37.5 Hours</span>
+
+                <ul>
+
+                    <li>Provided health education and screenings for a geriatric population.</li>
+
+                    <li>Assessed community members for chronic disease risks (HTN, Diabetes) and social determinants of health (SDOH).</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Medical-Surgical II (Cardiac PCU)</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">Bellevue Hospital Center | Jun - Jul 2025 | 80.5 Hours</span>
+
+                <ul>
+
+                    <li>Managed high-acuity patients using telemetry to identify hemodynamic changes.</li>
+
+                    <li>Utilized SBAR communication to escalate care and prevent deterioration.</li>
+
+                    <li>Executed advanced skills: IV insertion, phlebotomy, and sterile wound dressing.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Medical-Surgical I (Cardiac PCU)</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">Bellevue Hospital Center | Feb - Apr 2025 | 84 Hours</span>
+
+                <ul>
+
+                    <li>Conducted comprehensive head-to-toe assessments and documented patient data in Epic EMR.</li>
+
+                    <li>Implemented strict fall prevention and skin integrity protocols for patients with limited mobility.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Psychiatric Nursing</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">Maimonides Medical Center | Jan - Mar 2025 | 38 Hours</span>
+
+                <ul>
+
+                    <li>Conducted Mental Status Exams (MSE) and managed acute behavioral changes.</li>
+
+                    <li>Ensured milieu safety and strict adherence to suicide precautions.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Maternal-Newborn</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">Maimonides Medical Center | Jul - Aug 2025 | 37.5 Hours</span>
+
+                <ul>
+
+                    <li>Monitored patients for postpartum hemorrhage and pre-eclampsia symptoms.</li>
+
+                    <li>Assisted with newborn assessments and APGAR scoring.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Pediatrics</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">SUNY Downstate UHB | Jun 2025 | 37.5 Hours</span>
+
+                <ul>
+
+                    <li>Calculated pediatric medication dosages based on weight.</li>
+
+                    <li>Incorporated growth and developmental milestones into assessments.</li>
+
+                </ul>
+
+            </div>
+
+             <div class="card">
+
+                <h4>Foundations & Health Assessment</h4>
+
+                <span class="role">Student Nurse</span>
+
+                <span class="meta">SUNY Downstate | Oct - Nov 2024 | 97 Total Hours</span>
+
+                <ul>
+
+                    <li>Performed comprehensive head-to-toe physical examinations and health history interviews.</li>
+
+                    <li>Provided assistance with ADLs (hygiene, feeding, ambulation).</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container" id="experience">
+
+        <h3 class="section-title">Work Experience</h3>
+
+        <div class="grid">
+
+             <div class="card">
+
+                <h4>Administrative & Clinical Assistant (FWS)</h4>
+
+                <span class="role">SUNY Downstate Dept. of Pediatrics</span>
+
+                <span class="meta">Apr 2025 - Jun 2025</span>
+
+                <ul>
+
+                    <li>Performed pediatric head-to-toe assessments and obtained patient histories.</li>
+
+                    <li>Conducted triage, administered vaccines, and collected samples.</li>
+
+                    <li>Assisted with inventory cataloging and cloud migration for medical devices.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Patient Assistant (CDPAP)</h4>
+
+                <span class="role">High-Acuity Home Care</span>
+
+                <span class="meta">Mar 2025 - Present</span>
+
+                <ul>
+
+                    <li>Delivered care for a patient with complex comorbidities (Uncontrolled Diabetes, HTN, Post-Op).</li>
+
+                    <li>Managed strict glycemic monitoring, medication administration, and vital signs.</li>
+
+                    <li>Ensured safety via infection control, HIPAA compliance, and fall-prevention strategies.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Research Assistant</h4>
+
+                <span class="role">CUNY Graduate School of Public Health</span>
+
+                <span class="meta">Aug 2020 - Jun 2021</span>
+
+                <ul>
+
+                    <li>Directed a graduate team in a mixed-methods study of 120+ participants.</li>
+
+                    <li>Analyzed data using NVivo (qualitative) and SPSS (quantitative).</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Academic Research Intern</h4>
+
+                <span class="role">University of Rochester School of Medicine</span>
+
+                <span class="meta">Sep 2017 - May 2018</span>
+
+                <ul>
+
+                    <li>Created descriptive statistics and utilized STATA for data analysis.</li>
+
+                    <li>Analyzed research papers and summarized methods/results for literature reviews.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container" id="certifications">
+
+        <h3 class="section-title">Certifications, Awards & Education</h3>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h4>Education</h4>
+
+                <ul style="list-style: none; padding-left: 0;">
+
+                    <li>🎓 <strong>SUNY Downstate Health Sciences University</strong><br>Accelerated BSN | GPA: 3.68 (Dec 2025)</li>
+
+                    <li style="margin-top:10px;">🎓 <strong>CUNY Graduate School of Public Health</strong><br>MPH in Community Health | GPA: 3.79 (Jun 2021)</li>
+
+                    <li style="margin-top:10px;">🎓 <strong>University of Rochester</strong><br>BA in Health Policy (May 2019)</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Certifications</h4>
+
+                <ul style="list-style: none; padding-left: 0; font-size: 0.9rem;">
+
+                    <li>✅ <strong>Registered Nurse (RN)</strong>, NY State (Anticipated Feb 2026)</li>
+
+                    <li>✅ <strong>BLS Provider</strong> (American Heart Association)</li>
+
+                    <li>✅ <strong>Phlebotomy & Cardiology Assisting</strong></li>
+
+                    <li>✅ <strong>AI in Healthcare Specialization</strong> (Stanford)</li>
+
+                    <li>✅ <strong>Clinical Trials Operations</strong> (Johns Hopkins)</li>
+
+                    <li>✅ <strong>Essentials of Palliative Care</strong> (Stanford)</li>
+
+                    <li>✅ <strong>Symptom Management in Palliative Care</strong> (Stanford)</li>
+
+                    <li>✅ <strong>Medical Biller Specialization</strong> (AAPC)</li>
+
+                    <li>✅ <strong>Medical Terminology Specialization</strong></li>
+
+                    <li>✅ <strong>Intro to Integrative Nursing</strong> (U of Minnesota)</li>
+
+                    <li>✅ <strong>Community Engagement in Research</strong> (U of Rochester)</li>
+
+                    <li>✅ <strong>Opioid Use Disorder MAT Waiver Training</strong> (U of Virginia)</li>
+
+                    <li>✅ <strong>Human Subjects Research (HSR)</strong> (CITI)</li>
+
+                    <li>✅ <strong>GCP – Social & Behavioral Research</strong> (CITI)</li>
+
+                    <li>✅ <strong>Chinese for HSK 1</strong> (Peking University)</li>
+
+                </ul>
+
+            </div>
+
+             <div class="card">
+
+                <h4>Honors & Awards</h4>
+
+                <ul style="list-style: none; padding-left: 0; font-size: 0.9rem;">
+
+                    <li>🏆 <strong>Parker Jewish Institute Scholarship</strong> ($10k)</li>
+
+                    <li>🏆 <strong>Dean's List</strong> (University of Rochester)</li>
+
+                    <li>🏆 <strong>NSLS Excellence Award</strong> & Distinguished Member</li>
+
+                    <li>🏆 <strong>NYS Scholarships for Academic Excellence</strong></li>
+
+                    <li>🏆 <strong>Albert Shanker College Scholarship</strong> (UFT)</li>
+
+                    <li>🏆 <strong>Presidential Inauguration Youth Leadership Medal</strong></li>
+
+                    <li>🏆 <strong>National Academy of Future Physicians Award</strong></li>
+
+                    <li>🏆 <strong>First Robotic Second Place Award</strong></li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h4>Skills & Languages</h4>
+
+                <div class="tag-container">
+
+                    <span class="tag">Epic EMR</span>
+
+                    <span class="tag">Telemetry & EKG</span>
+
+                    <span class="tag">Phlebotomy</span>
+
+                    <span class="tag">Fetal Monitoring</span>
+
+                    <span class="tag">Aseptic Technique</span>
+
+                    <span class="tag">SPSS / NVivo / STATA</span>
+
+                    <span class="tag">Healthcare AI</span>
+
+                    <span class="tag">Medical Billing</span>
+
+                    <span class="tag">English (Native)</span>
+
+                    <span class="tag">Bengali (Native)</span>
+
+                    <span class="tag">Japanese (Conv.)</span>
+
+                    <span class="tag">Hindi/Urdu (Conv.)</span>
+
+                    <span class="tag">Mandarin (HSK 1)</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container" id="contact">
+
+        <h3 class="section-title">Contact</h3>
+
+        <p>I am currently available for RN Residency and Staff Nurse opportunities.</p>
+
+        
+
+        <div style="text-align: center; margin-top: 20px;">
+
+            <a href="https://forms.gle/Bjb8zZs5pPssBWfk7" target="_blank" class="btn" style="background: var(--primary); color: white;">
+
+                Fill Out Contact Form
+
+            </a>
+
+            <br><br>
+
+            <a href="https://linkedin.com/in/shafaul-sharup" style="color: var(--secondary); font-weight: bold;">
+
+                Or message me on LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>&copy; 2026 Shafaul Sharup, MPH, BSN. All Rights Reserved.</p>
+
+    </footer>
+
+
+</body>
+
+</html>
+
